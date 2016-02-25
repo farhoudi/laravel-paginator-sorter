@@ -90,14 +90,15 @@ function get_pagination_links($object) {
  *
  * @author Ali Farhoudi
  * @param $object
+ * @param $table
  * @return object
  */
-function get_sorted($object) {
+function get_sorted($object, $table) {
     $sort_conditions = get_sort_conditions();
     if ($sort_conditions['column'] === 'id') {
-        return $object->orderby($sort_conditions['column'], $sort_conditions['order']);
+        return $object->orderby($table . '.' . $sort_conditions['column'], $sort_conditions['order']);
     } else {
-        return $object->orderby($sort_conditions['column'], $sort_conditions['order'])
-            ->orderby('id', 'desc');
+        return $object->orderby($table . '.' . $sort_conditions['column'], $sort_conditions['order'])
+            ->orderby($table . '.id', 'desc');
     }
 }

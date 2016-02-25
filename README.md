@@ -28,7 +28,7 @@ This link will redirect to same page will some get parameters as your column nam
 * For fetching result sorted you need to use "get_sorted" function to set needed conditions to your query.
 For example in "app/controllers/TransactionsController.php" just write:
 ```php
-$transactions = get_sorted($transactions)->paginate(10);
+$transactions = get_sorted($transactions, 'transactions')->paginate(10);
 ```
 * Now for pagination links (to include your sort parameters) you can use "get_pagination_links" function.
 For example in "app/view/transactions.blade.php" at the end of the page write:
