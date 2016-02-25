@@ -1,4 +1,4 @@
-# laravel-paginator-sorter
+# Laravel Paginator Sorter
 A helper to make your tables sortable
 
 ## Installation
