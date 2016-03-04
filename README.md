@@ -11,13 +11,13 @@ A simple way to use this library in laravel 4.2. You can use it in other version
 in helpers.php write:
     
     ```php
-        require_once __DIR__ . '/helpers/pagination_sort_helper.php';
+    require_once __DIR__ . '/helpers/pagination_sort_helper.php';
     ```
 5. Load helpers.php file in "app/start/global.php". At the end of the file:
     
     ```php
-        require app_path() . '/filters.php';
-        require app_path() . '/helpers.php';
+    require app_path() . '/filters.php';
+    require app_path() . '/helpers.php';
     ```
 	
 ## Usage
